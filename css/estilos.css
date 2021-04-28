@@ -309,6 +309,7 @@ form label {
 
 form input {
     margin: 8px 0;
+    min-height: 50px;
 }
 form textarea{
     padding: 15px;
