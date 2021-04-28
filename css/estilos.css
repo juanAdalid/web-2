@@ -312,19 +312,25 @@ form input {
     border: none;
     border-radius: 10px;
     margin: 8px 0;
+    
+    padding: 0 20px;
+    font-size: 18px;
 }
 form input::placeholder{
-    padding-left: 10px;
+    text-align: right;
+    padding-right: 10px;
 }
 form textarea{
     padding: 15px;
     border-radius: 10px;
     resize: none;
+    
+    font-size: 17px;
 }
 
 form textarea::placeholder{
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .boton-enviar a{
