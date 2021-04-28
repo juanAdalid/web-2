@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    max-width: 1920px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    /* overflow: hidden; */
+}
+
+.container {
+    /* max-width: 1920px; */
+    width: 90%;
+    margin: auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 65vh;
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(240, 28%, 19%, 0.678), hsla(244, 38%, 28%, 0.555), hsla(246, 57%, 10%, 0.815)), url(../img/portada-2.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-attachment: fixed;
+
+    /* border: 2px solid green; */
+
+}
+
+.nav-menu {
+    grid-row: 1/2;
+    grid-column: 6/9;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    margin-right: 35px;
+    text-decoration: none;
+
+
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.textos-header {
+    grid-row: 2/5;
+    grid-column: 2/6;
+    color: #fff;
+
+    /* border: 1px solid green; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.textos-header h1 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.textos-header h2 {
+    font-weight: 100;
+
+}
+
+.boton-header {
+    margin-top: 20px;
+
+}
+
+.boton-header>a {
+    border: 2px solid #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    transition: background .5s;
+
+}
+
+.boton-header>a:hover {
+
+    background: rgb(35, 35, 62);
+}
+
+.wave-header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+
+
+}
+
+/* nosotros */
+.subtitulo {
+    text-align: center;
+    font-size: 37px;
+    font-weight: 100;
+    color: #1c1427;
+}
+
+.nosotros-container {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nosotros-container img {
+    max-width: 550px;
+    border-radius: 30px;
+}
+
+.nosotros-parrafo {
+    text-align: justify;
+    margin: 0 15px;
+}
+
+.nosotros-parrafo .texto {
+    margin: 15px 0;
+}
+
+/* galeria */
+
+.galeria {
+    background: #f2f2f2;
+    padding: 20px 0;
+    margin-top: 23px;
+}
+
+.galeria-container {
+    overflow: hidden;
+    margin-top: 15px;
+    /* border: 1px solid greenyellow; */
+    display: grid;
+    grid-template-areas:
+        "img1 img1 img2 img3 img4"
+        "img5 img6 img7 img8 img8";
+    gap: 7px;
+    /* height: 500px; */
+    width: 95%;
+    margin: 20px auto;
+}
+
+.galeria-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.galeria-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.img-1 {
+    grid-area: img1;
+}
+
+.img-2 {
+    grid-area: img2;
+}
+
+.img-3 {
+    grid-area: img3;
+}
+
+
+.img-4 {
+    grid-area: img4;
+}
+
+.img-5 {
+    grid-area: img5;
+}
+
+.img-6 {
+    grid-area: img6;
+}
+
+.img-7 {
+    grid-area: img7;
+}
+
+.img-8 {
+    grid-area: img8;
+
+}
+
+.img-hover {
+    position: absolute;
+    background: rgba(48, 27, 63, .8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    transform: translateX(100%);
+    transition: transform .5s;
+}
+
+.galeria-img:hover .img-hover {
+    transform: translateX(0);
+}
+
+/* ubicanos */
+.ubicanos {
+    margin-top: 20px;
+
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    margin: 25px;
+}
+
+/* contactos */
+.contactos {
+    /* border: 1px solid red; */
+    /* background: #654ea3; */
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 20px 0;
+    border-radius: 50px 0 50px 0;
+    margin-bottom: 20px;
+
+}
+
+.contactos p {
+    text-align: center;
+    /* border: 1px solid red; */
+    margin: 15px 0 20px;
+}
+
+.container-contactos {
+    border: 2px solid #fff;
+    display: flex;
+    max-width: 500px;
+    margin: 20px auto;
+    justify-content: space-around;
+    align-items: center;
+    padding:15px;
+    border-radius: 10px;
+
+}
+
+.img-contacto img {
+    width: 120px;
+}
+
+form {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+form label {
+    font-weight: 100;
+}
+
+form input {
+    margin: 8px 0;
+}
+form textarea{
+    padding: 15px;
+}
+
+form textarea::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.boton-enviar a{
+    border: 2px solid #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 12px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #4a3a79 ;
+    color: #fff;
+    transition: background .5s;
+}
+
+.boton-enviar a:hover{
+    background: #211938 ;
+    
+}
+
+/* footer */
+footer{
+    /* border: 1px solid green; */
+    background: #252525;
+}
+
+.footer-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-container p{
+    color: #fff;
+}
+.redes{
+    margin: 10px 0;
+}
+.redes a{
+    color: #fff;
+}
+.redes .fab{
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.footer-container .autor{
+    font-weight: 100;
+    font-size: 14px;
+}
