@@ -319,6 +319,7 @@ form input::placeholder{
 form textarea{
     padding: 15px;
     border-radius: 10px;
+    resize: none;
 }
 
 form textarea::placeholder{
